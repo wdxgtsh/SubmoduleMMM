@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		44425CEB1C80718100D87184 /* SubmoduleMMM.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 44425CEA1C80718100D87184 /* SubmoduleMMM.h */; };
 		44425CED1C80718100D87184 /* SubmoduleMMM.m in Sources */ = {isa = PBXBuildFile; fileRef = 44425CEC1C80718100D87184 /* SubmoduleMMM.m */; };
+		D09CA559E3D84DE24610B5B8 /* libPods-SubmoduleMMM.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AF59CD0BE2A2C9FE75C5BCA /* libPods-SubmoduleMMM.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		25DF1F8F56E4AABBB8982A28 /* Pods-SubmoduleMMM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SubmoduleMMM.release.xcconfig"; path = "../Pods/Target Support Files/Pods-SubmoduleMMM/Pods-SubmoduleMMM.release.xcconfig"; sourceTree = "<group>"; };
+		2AF59CD0BE2A2C9FE75C5BCA /* libPods-SubmoduleMMM.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SubmoduleMMM.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F74B5FC5228DFC12110535F /* Pods-SubmoduleMMM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SubmoduleMMM.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-SubmoduleMMM/Pods-SubmoduleMMM.debug.xcconfig"; sourceTree = "<group>"; };
 		44425CE71C80718100D87184 /* libSubmoduleMMM.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSubmoduleMMM.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		44425CEA1C80718100D87184 /* SubmoduleMMM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SubmoduleMMM.h; sourceTree = "<group>"; };
 		44425CEC1C80718100D87184 /* SubmoduleMMM.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubmoduleMMM.m; sourceTree = "<group>"; };
@@ -35,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D09CA559E3D84DE24610B5B8 /* libPods-SubmoduleMMM.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +51,8 @@
 			children = (
 				44425CE91C80718100D87184 /* SubmoduleMMM */,
 				44425CE81C80718100D87184 /* Products */,
+				B8BB6E7B6086227E1187EEFB /* Pods */,
+				767D947B7A7D55762B0CF2A8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,6 +73,23 @@
 			path = SubmoduleMMM;
 			sourceTree = "<group>";
 		};
+		767D947B7A7D55762B0CF2A8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2AF59CD0BE2A2C9FE75C5BCA /* libPods-SubmoduleMMM.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B8BB6E7B6086227E1187EEFB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2F74B5FC5228DFC12110535F /* Pods-SubmoduleMMM.debug.xcconfig */,
+				25DF1F8F56E4AABBB8982A28 /* Pods-SubmoduleMMM.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -73,9 +97,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 44425CF01C80718100D87184 /* Build configuration list for PBXNativeTarget "SubmoduleMMM" */;
 			buildPhases = (
+				E935C4D1875FB53F7AC9F996 /* Check Pods Manifest.lock */,
 				44425CE31C80718100D87184 /* Sources */,
 				44425CE41C80718100D87184 /* Frameworks */,
 				44425CE51C80718100D87184 /* CopyFiles */,
+				2D8603ABFFA107003585CA49 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -116,6 +142,39 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2D8603ABFFA107003585CA49 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-SubmoduleMMM/Pods-SubmoduleMMM-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E935C4D1875FB53F7AC9F996 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		44425CE31C80718100D87184 /* Sources */ = {
@@ -211,6 +270,7 @@
 		};
 		44425CF11C80718100D87184 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F74B5FC5228DFC12110535F /* Pods-SubmoduleMMM.debug.xcconfig */;
 			buildSettings = {
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -220,6 +280,7 @@
 		};
 		44425CF21C80718100D87184 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25DF1F8F56E4AABBB8982A28 /* Pods-SubmoduleMMM.release.xcconfig */;
 			buildSettings = {
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -246,6 +307,7 @@
 				44425CF21C80718100D87184 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
